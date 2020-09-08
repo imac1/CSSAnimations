@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#background {
+  position: relative;
+  background: url("img/3crop-tile.png");
+  height: 330px;
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  animation: animate 10s linear infinite;
+}
+
+#runner {
+  position: relative;
+  background: url("img/panda_colour.png");
+  width: 250px;
+  height: 330px;
+  animation: walk 1s steps(12) infinite, forwards 10s linear infinite;
+}
+
+@keyframes walk {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 3000px;
+  }
+}
+
+@keyframes forwards {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(1200px);
+  }
+}
+@keyframes animate {
+  from {
+    background-position: 0% 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
