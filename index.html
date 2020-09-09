@@ -4,37 +4,174 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
-    <style>
-      button {
-        font-size: 1em;
-        margin: 1em;
-        padding: 0.25em 1em;
-        border: 2px solid lightseagreen;
-        background: lightseagreen;
-        border-radius: 3px;
-        line-height: 2rem;
-        cursor: pointer;
-      }
-
-      button a {
-        color: #fff;
-        text-decoration: none;
-      }
-    </style>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
   </head>
   <body>
     <h3>CSS Animations</h3>
-    <div>
-      <button><a href="Transitioned Properties/index.html">CSS Transitioned Properties</a></button>
-      <button><a href="Animated Card/index.html">Animated Card</a></button>
-      <button><a href="Third Button/index-START.html">Sprite Sheets</a></button>
-      <button><a href="Fourth Button/index.html">4th Button</a></button>
+
+
+    <div class="row-container wide-width">
+      <div
+        id="builder-preview"
+        class="row small-gutters center-align-columns accent-teal"
+      >
+        <svg class="svg-shape" viewBox="0 0 300 322">
+          <defs>
+            <linearGradient id="gradient-3" gradientTransform="rotate(90)">
+              <stop offset="5%" stop-color="rgba(233,244,255,0)"></stop>
+              <stop offset="95%" stop-color="rgba(233,244,255,1)"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            fill="url(#gradient-3)"
+            d="M300,196.58v-71.16c0-31.57-16.84-60.75-44.19-76.53l-61.63-35.58c-27.34-15.79-61.03-15.79-88.37,0 L44.19,48.89C16.84,64.67,0,93.85,0,125.42v71.16c0,31.57,16.84,60.75,44.19,76.53l61.63,35.58c27.34,15.79,61.03,15.79,88.37,0 l61.63-35.58C283.16,257.33,300,228.15,300,196.58z"
+          ></path>
+        </svg>
+        <div class="column-container card-button-navigation">
+          <div class="tabs column small-spacing" data-tabgroup="tab-group">
+            <a
+              class="card card-button"
+              href="Transitioned Properties/index.html"
+            >
+              <svg viewBox="0 0 28 28">
+                <path d="M11,19V9l8,5L11,19z"></path>
+                <path
+                  class="transparent"
+                  d="M14,2c6.62,0,12,5.38,12,12s-5.38,12-12,12S2,20.62,2,14S7.38,2,14,2 M14,0C6.27,0,0,6.27,0,14 c0,7.73,6.27,14,14,14s14-6.27,14-14C28,6.27,21.73,0,14,0L14,0z"
+                ></path>
+              </svg>
+              5th Button
+            </a>
+            <a class="card card-button" href="Animated Card/index.html">
+              <svg viewBox="0 0 28 28">
+                <path d="M11,19V9l8,5L11,19z"></path>
+                <path
+                  class="transparent"
+                  d="M14,2c6.62,0,12,5.38,12,12s-5.38,12-12,12S2,20.62,2,14S7.38,2,14,2 M14,0C6.27,0,0,6.27,0,14 c0,7.73,6.27,14,14,14s14-6.27,14-14C28,6.27,21.73,0,14,0L14,0z"
+                ></path>
+              </svg>
+              6th Button
+            </a>
+            <a class="card card-button" href="">
+              <svg viewBox="0 0 28 28">
+                <path d="M11,19V9l8,5L11,19z"></path>
+                <path
+                  class="transparent"
+                  d="M14,2c6.62,0,12,5.38,12,12s-5.38,12-12,12S2,20.62,2,14S7.38,2,14,2 M14,0C6.27,0,0,6.27,0,14 c0,7.73,6.27,14,14,14s14-6.27,14-14C28,6.27,21.73,0,14,0L14,0z"
+                ></path>
+              </svg>
+              7th Button
+            </a>
+            <a class="card card-button" href="">
+              <svg viewBox="0 0 28 28">
+                <path d="M11,19V9l8,5L11,19z"></path>
+                <path
+                  class="transparent"
+                  d="M14,2c6.62,0,12,5.38,12,12s-5.38,12-12,12S2,20.62,2,14S7.38,2,14,2 M14,0C6.27,0,0,6.27,0,14 c0,7.73,6.27,14,14,14s14-6.27,14-14C28,6.27,21.73,0,14,0L14,0z"
+                ></path>
+              </svg>
+              8th &amp; Button
+            </a>
+          </div>
+        </div>
+        <div class="column-container card-button-navigation">
+          <div class="tabs column small-spacing" data-tabgroup="tab-group">
+            <a
+              class="card card-button current-item"
+              href="Transitioned Properties/index.html"
+            >
+              <svg viewBox="0 0 28 28">
+                <path d="M11,19V9l8,5L11,19z"></path>
+                <path
+                  class="transparent"
+                  d="M14,2c6.62,0,12,5.38,12,12s-5.38,12-12,12S2,20.62,2,14S7.38,2,14,2 M14,0C6.27,0,0,6.27,0,14 c0,7.73,6.27,14,14,14s14-6.27,14-14C28,6.27,21.73,0,14,0L14,0z"
+                ></path>
+              </svg>
+              CSS Transitioned Properties
+            </a>
+            <a class="card card-button" href="Animated Card/index.html">
+              <svg viewBox="0 0 28 28">
+                <path d="M11,19V9l8,5L11,19z"></path>
+                <path
+                  class="transparent"
+                  d="M14,2c6.62,0,12,5.38,12,12s-5.38,12-12,12S2,20.62,2,14S7.38,2,14,2 M14,0C6.27,0,0,6.27,0,14 c0,7.73,6.27,14,14,14s14-6.27,14-14C28,6.27,21.73,0,14,0L14,0z"
+                ></path>
+              </svg>
+              Animated Card
+            </a>
+            <a class="card card-button" href="Sprite Sheets/index.html">
+              <svg viewBox="0 0 28 28">
+                <path d="M11,19V9l8,5L11,19z"></path>
+                <path
+                  class="transparent"
+                  d="M14,2c6.62,0,12,5.38,12,12s-5.38,12-12,12S2,20.62,2,14S7.38,2,14,2 M14,0C6.27,0,0,6.27,0,14 c0,7.73,6.27,14,14,14s14-6.27,14-14C28,6.27,21.73,0,14,0L14,0z"
+                ></path>
+              </svg>
+              Sprite Sheets
+            </a>
+            <a class="card card-button" href="">
+              <svg viewBox="0 0 28 28">
+                <path d="M11,19V9l8,5L11,19z"></path>
+                <path
+                  class="transparent"
+                  d="M14,2c6.62,0,12,5.38,12,12s-5.38,12-12,12S2,20.62,2,14S7.38,2,14,2 M14,0C6.27,0,0,6.27,0,14 c0,7.73,6.27,14,14,14s14-6.27,14-14C28,6.27,21.73,0,14,0L14,0z"
+                ></path>
+              </svg>
+              4th Button
+            </a>
+          </div>
+        </div>
+        <div class="column-container card-button-navigation">
+          <div class="tabs column small-spacing" data-tabgroup="tab-group">
+            <a class="card card-button" href="">
+              <svg viewBox="0 0 28 28">
+                <path d="M11,19V9l8,5L11,19z"></path>
+                <path
+                  class="transparent"
+                  d="M14,2c6.62,0,12,5.38,12,12s-5.38,12-12,12S2,20.62,2,14S7.38,2,14,2 M14,0C6.27,0,0,6.27,0,14 c0,7.73,6.27,14,14,14s14-6.27,14-14C28,6.27,21.73,0,14,0L14,0z"
+                ></path>
+              </svg>
+              5th Button
+            </a>
+            <a class="card card-button" href="">
+              <svg viewBox="0 0 28 28">
+                <path d="M11,19V9l8,5L11,19z"></path>
+                <path
+                  class="transparent"
+                  d="M14,2c6.62,0,12,5.38,12,12s-5.38,12-12,12S2,20.62,2,14S7.38,2,14,2 M14,0C6.27,0,0,6.27,0,14 c0,7.73,6.27,14,14,14s14-6.27,14-14C28,6.27,21.73,0,14,0L14,0z"
+                ></path>
+              </svg>
+              6th Button
+            </a>
+            <a class="card card-button" href="">
+              <svg viewBox="0 0 28 28">
+                <path d="M11,19V9l8,5L11,19z"></path>
+                <path
+                  class="transparent"
+                  d="M14,2c6.62,0,12,5.38,12,12s-5.38,12-12,12S2,20.62,2,14S7.38,2,14,2 M14,0C6.27,0,0,6.27,0,14 c0,7.73,6.27,14,14,14s14-6.27,14-14C28,6.27,21.73,0,14,0L14,0z"
+                ></path>
+              </svg>
+              7th Button
+            </a>
+            <a class="card card-button" href="">
+              <svg viewBox="0 0 28 28">
+                <path d="M11,19V9l8,5L11,19z"></path>
+                <path
+                  class="transparent"
+                  d="M14,2c6.62,0,12,5.38,12,12s-5.38,12-12,12S2,20.62,2,14S7.38,2,14,2 M14,0C6.27,0,0,6.27,0,14 c0,7.73,6.27,14,14,14s14-6.27,14-14C28,6.27,21.73,0,14,0L14,0z"
+                ></path>
+              </svg>
+              8th &amp; Button
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+     
+       
     </div>
   </body>
 </html>
-  
-  
-  
-  
- 
