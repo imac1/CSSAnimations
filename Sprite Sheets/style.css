@@ -21,6 +21,23 @@ body {
   animation: walk 1s steps(12) infinite, forwards 10s linear infinite;
 }
 
+#sky {
+  position: relative;
+  background: url("img/white_cloudy_day-tile.jpg");
+  height: 330px;
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  animation: animate 10s linear infinite;
+}
+#bird {
+  position: relative;
+  background: url("img/bird-tile.png");
+  width: 95px;
+  height: 100px;
+  animation: fly 1s steps(10) infinite, forward 10s linear infinite;
+}
+
 @keyframes walk {
   0% {
     background-position: 0px;
@@ -44,5 +61,22 @@ body {
   }
   to {
     background-position: 100% 0;
+  }
+}
+@keyframes fly {
+  0% {
+    background-position: 10px;
+  }
+  100% {
+    background-position: 3000px;
+  }
+}
+
+@keyframes forward {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(1400px);
   }
 }
