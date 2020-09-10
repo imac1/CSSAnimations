@@ -1,0 +1,100 @@
+img {
+  width: 300px;
+  display: block;
+  margin: 0 0;
+  margin-top: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  flex: 1;
+  width: 100%;
+  perspective: 1000px;
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6,
+.img7,
+.img8,
+.img9,
+.img10,
+.img12,
+.img11,
+.img13,
+.img14,
+.img15,
+.img16 {
+  transition: transform 2s;
+}
+.img1:hover {
+  transform: translateY(500px);
+}
+.img2:hover {
+  transform: translate(-200px, 200px);
+}
+.img3:hover {
+  transform: scaleX(2);
+}
+.img4:hover {
+  transform: scaleY(1.5);
+}
+.img5:hover {
+  transform: scale(-2);
+}
+.img6:hover {
+  transform: rotate(20deg);
+}
+.img7:hover {
+  transform: rotate(1turn);
+}
+.img8:hover {
+  transform: skew(20deg, 30deg);
+}
+.img9:hover {
+  transform-origin: top;
+  transform: rotate(45deg);
+}
+.img10:hover {
+  transform-origin: bottom right;
+  transform: rotate(45deg);
+}
+.img11:hover {
+  transform-origin: 200px, 150px;
+  transform: rotate(90deg);
+}
+.img12 {
+  perspective: 1000px;
+}
+.img12:hover {
+  transform: translateZ(300px);
+}
+.img13:hover {
+  transform: rotateX(180deg);
+}
+.img14:hover {
+  transform: rotateY(180deg);
+}
+.img15:hover {
+  transform: rotateY(90deg);
+}
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
