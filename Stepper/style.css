@@ -1,0 +1,194 @@
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.steps-header .steps-header-container {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+.steps-header .step-item {
+  width: 25%;
+  text-align: center;
+  color: #888;
+  display: table-cell;
+  position: relative;
+}
+.steps-header .step-item .step-number,
+.steps-header .step-item .step-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+.steps-header .step-item .step-valid-icon {
+  display: none;
+}
+.steps-header .step-item .step-invalid-icon {
+  display: none;
+}
+.steps-header .step-item.header-is-valid .step-number {
+  display: none;
+}
+.steps-header .step-item.header-is-valid .step-valid-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  font-size: 14px;
+  line-height: 20px;
+  border: 2px solid #090;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+  z-index: 5;
+}
+.steps-header .step-item.header-is-valid .step-valid-icon i {
+  color: #090;
+}
+.steps-header .step-item .step-number {
+  width: 26px;
+  height: 26px;
+  z-index: 5;
+  font-weight: 700;
+  border-radius: 50%;
+  position: relative;
+  line-height: 22px;
+  border: 2px solid #888;
+}
+.steps-header .step-item.step-complete {
+  cursor: pointer;
+  color: #222;
+}
+.steps-header .step-item.step-complete .step-number {
+  background: #fff;
+  color: #090;
+  border-color: #090;
+}
+.steps-header .step-item.step-complete .step-number > span {
+  display: none;
+}
+.steps-header .step-item.step-complete .step-number::before {
+  content: "\e611";
+  font-family: eMAGv2;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.steps-header .step-item.header-is-valid:hover {
+  cursor: pointer;
+}
+.steps-header .step-item.step-active {
+  background-color: transparent;
+  color: #005eb8;
+  font-weight: 600;
+}
+
+.em {
+  display: inline-block;
+  font: normal normal normal 14px/1 eMAGv2;
+  /* ptr fonturile de pe emag */
+  /* 
+  font-family:eMAGv2;
+  src:url(font-icons/emagicons/eMAGv2-1596442420.eot);
+  src:url(font-icons/emagicons/eMAGv2-1596442420.eot) format("embedded-opentype"),
+  url(font-icons/emagicons/eMAGv2-1596442420.woff2) format("woff2"),
+  url(font-icons/emagicons/eMAGv2-1596442420.woff) format("woff"),
+  url(font-icons/emagicons/eMAGv2-1596442420.ttf) format("truetype"),
+  url(font-icons/emagicons/eMAGv2-1596442420.svg#eMAGv2) format("svg"); */
+  /* fonturi end */
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.em-check:before {
+  content: "&#10003;";
+}
+.em-close:before {
+  content: "&#10006";
+}
+@media (min-width: 992px) {
+  .steps-header .step-item.step-active {
+    background-color: #005eb8;
+    color: #fff;
+  }
+  .steps-header .step-item.step-active.header-is-valid .step-valid-icon {
+    background-color: #005eb8;
+    border-color: #fff;
+  }
+  .steps-header .step-item.step-active.header-is-valid .step-valid-icon i {
+    color: #fff;
+  }
+}
+.steps-header .step-item.step-active .step-number {
+  background: #fff;
+  border-color: #005eb8;
+}
+@media (min-width: 992px) {
+  .steps-header .step-item.step-active .step-number {
+    background: #005eb8;
+    border-color: #fff;
+  }
+}
+@media (max-width: 991px) {
+  .steps-header .step-item .step-text {
+    display: block;
+    padding: 5px 5px 0;
+    font-size: 12px;
+  }
+  .steps-header .step-item .step-number {
+    background: #eee;
+  }
+  .steps-header .step-item::after,
+  .steps-header .step-item::before {
+    content: " ";
+    width: 50%;
+    height: 1px;
+    z-index: 1;
+    top: 13px;
+    background: #888;
+    position: absolute;
+  }
+  .steps-header .step-item::before {
+    left: 0;
+  }
+  .steps-header .step-item::after {
+    left: 50%;
+  }
+  .steps-header .step-item.step-complete::after,
+  .steps-header .step-item.step-complete::before {
+    background: #005eb8;
+  }
+  .steps-header .step-item.step-active .step-text {
+    font-weight: 700;
+  }
+  .steps-header .step-item.step-active::before {
+    background: #005eb8;
+  }
+}
+@media (min-width: 992px) {
+  .steps-header {
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .steps-header .step-item {
+    padding: 15px 10px;
+    font-size: 16px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .steps-header .step-item .step-text {
+    line-height: 24px;
+  }
+  .steps-header .step-item .step-number {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .steps-header .step-item:first-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
