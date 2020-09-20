@@ -6,8 +6,12 @@
 }
 .steps-header .steps-header-container {
   width: 100%;
-  display: table;
-  table-layout: fixed;
+  display: flex;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  -webkit-flow-into: row wrap;
+  justify-content: space-around;
 }
 .steps-header .step-item {
   width: 25%;
@@ -15,6 +19,7 @@
   color: #888;
   display: table-cell;
   position: relative;
+  flex: 1 1 auto;
 }
 .steps-header .step-item .step-number,
 .steps-header .step-item .step-text {
